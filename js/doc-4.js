@@ -28,7 +28,7 @@ function mostrarAltas(altas) {
   for (const producto of altas) {
     console.log("Nueva alta ingresada al Sistema: ")
     console.log(producto);
-    console.log("detalles: " + producto.articulo + ", en color: " + producto.color + ", con precio : " + producto.precioFull);
+    console.log("detalles: se dio de alta correctamente el articulo:" + producto.articulo + ", en color: " + producto.color + ", con precio : " + producto.precioFull);
   }
 }
 
