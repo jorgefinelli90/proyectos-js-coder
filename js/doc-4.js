@@ -1,18 +1,13 @@
 
 function nuevaAltaProducto() {
-  let cantidadAltas = parseInt(prompt("Ingresar el numero de productos que deseas dar de alta"));
+  let cantidadAltas = parseInt(prompt("Ingresar la cantidad de referencias que deseas dar de alta"));
   let altas = [];
   for (let index = 0; index < cantidadAltas; index++) {
-    let articulo = prompt("Ingrese el nombre del producto:");
+    let articulo = prompt("Ingrese el nombre del articulo:");
     let cantidad = prompt("Ingrese el stock a ingresar");
     let color = prompt("Ingrese el color");
     let precioFull = prompt("Ingrese el full price del producto");
-    let altaAIngresar = new Alta(
-      articulo,
-      cantidad,
-      color,
-      precioFull
-    );
+    let altaAIngresar = new Alta(articulo,cantidad,color,precioFull);
     //usamos push para agregar un nuevo elemento al array
     altas.push(altaAIngresar);
   }
