@@ -146,6 +146,8 @@ for (const name of catalogo) {
 }
 */
 //----------------------------------------------------------------------------------------------------------------------------
+
+/* 
 class Producto{
     constructor(nombre, precioCompra, precioVenta, cantidad){
         this.nombre = nombre.toUpperCase()
@@ -176,4 +178,133 @@ function main(){
     agregarProductos()
 }
 
-main()
+main() 
+
+*/
+
+//------------------------------------------------------------------------------------------------------------
+/* 
+let a = parseFloat(prompt("ingrese primer numero"))
+let b = parseFloat(prompt("ingrese segundo numero"))
+
+function asignarOperacion(op) {
+    if (op == "sumar") {
+        return (a, b) => a + b
+    } else if (op == "restar") {
+        return (a, b) => a - b
+    } else if (op == "multiplica") {
+        return (a, b) => a * b
+    }
+}
+
+let suma = asignarOperacion("sumar")
+let resta = asignarOperacion("restar")
+let multiplica = asignarOperacion("multiplica")
+
+alert(suma(a, b))
+
+console.log( suma(a, b) )  //  10
+console.log( resta(a, b) )  //  5
+console.log( multiplica(a, b) )  //  5 
+
+*/
+//--------------------------------------------------------------------------------------------------------------
+/* function porCadaUno(arr, fn) {
+    for (const el of arr) {
+        fn(el)
+    }
+}
+
+const numeros= [1, 2, 3, 4]
+
+porCadaUno(numeros, console.log)
+// 1
+// 2
+// 3
+// 4
+let total = 0
+//--------------------------------------------------------------------------------------------------------------
+function acumular(num) {
+    total += num
+}
+
+porCadaUno(numeros, acumular)
+console.log(total) // 10
+
+
+//----------find-----------------------------------------------------------
+
+const cursos = [
+    {nombre: 'Javascript', precio: 15000},
+    {nombre: 'ReactJS', precio: 22000},
+]
+
+const resultado = cursos.find((el) => el.nombre === "ReactJS")
+const resultado2 = cursos.find((el) => el.nombre === "Javascript")
+
+console.log(resultado) // {nombre: 'ReactJS', precio: 22000}
+console.log(resultado2) // undefined 
+
+
+//----------filter-----------------------------------------------------------
+
+const cursos = [
+    {nombre: 'Javascript', precio: 15000},
+    {nombre: 'ReactJS', precio: 22000},
+    {nombre: 'AngularJS', precio: 22000},
+]
+
+const resultado = cursos.filter((el) => el.nombre.includes('JS'))
+const resultado2 = cursos.filter((el) => el.precio < 14000)
+
+console.log(resultado)
+
+
+console.log(resultado2) // []
+
+
+//----------some----------------------------------------------------------
+
+console.log( cursos.some((el) => el.nombre == "Desarrollo Web")) 
+// true
+console.log( cursos.some((el) => el.nombre == "VueJS")) 
+// false
+
+
+
+//----------map---------------------------------------------------------
+
+const cursos = [
+    {nombre: 'Javascript', precio: 15000},
+    {nombre: 'ReactJS', precio: 22000},
+    {nombre: 'AngularJS', precio: 22000},
+    {nombre: 'Desarrollo Web', precio: 16000},
+]
+
+const nombres = cursos.map((el) => el.nombre)
+console.log(nombres)
+// [ 'Javascript', 'ReactJS', 'AngularJS', 'Desarrollo Web' ]
+const precios = cursos.map((el) => el.precio)
+console.log(precios)
+// [ 'Javascript', 'ReactJS', 'AngularJS', 'Desarrollo Web' ]
+
+
+//----------reduce---------------------------------------------------------
+const numeros = [1, 2, 3, 4, 5, 6]
+const total = numeros.reduce((acumulador, elemento) => acumulador + elemento, 0)
+
+console.log(total) // 21
+
+*/
+
+const productos = [
+    {nombre: "sweater", precio: 15},
+    {nombre: "Campera Lion", precio: 15},
+]
+
+let busqueda = (prompt("ingrese el valor"))
+const resultado = productos.find((producto) => producto.nombre === busqueda)
+const resultadoDos = productos.find((producto) => producto.nombre === "Campera Lion")
+
+console.log(resultado);
+console.log(resultadoDos);
