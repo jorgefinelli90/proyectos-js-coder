@@ -296,7 +296,7 @@ const total = numeros.reduce((acumulador, elemento) => acumulador + elemento, 0)
 console.log(total) // 21
 
 */
-
+/* 
 const productos = [
     {nombre: "sweater", precio: 15},
     {nombre: "Campera Lion", precio: 15},
@@ -307,4 +307,38 @@ const resultado = productos.find((producto) => producto.nombre === busqueda)
 const resultadoDos = productos.find((producto) => producto.nombre === "Campera Lion")
 
 console.log(resultado);
-console.log(resultadoDos);
+console.log(resultadoDos); */
+
+/* console.dir(document);
+console.dir(document.tittle);
+
+let divTitulos = document.getElementsByClassName("titulos")
+let divTituloDesafio = document.getElementsByClassName("titulo-desafio")
+
+console.dir(divTitulos);
+console.log(divTitulos.innerHTML);
+console.dir(divTituloDesafio);
+console.dir(divTituloDesafio.innerHTML); */
+/* 
+let listaContenedores = document.getElementsByClassName("contenedor-ejemplo")
+console.log(listaContenedores);
+console.log(listaContenedores[2].innerHTML);
+
+//for(const elemento of listaContenedores){
+//    console.log(elemento.innerHTML);
+//}
+
+listaContenedores.innerHTML = <h2>Hola mundo</h2> */
+/* 
+// ejemplo-5
+let parrafo = document.getElementById("parrafo-5")
+console.log(parrafo.innerText);
+parrafo.innerText = "Hola, este es un parrafo modificado"
+console.log(parrafo.innerText); 
+*/
+/* 
+let contenedor = document.getElementById("contenedor-6")
+contenedor.innerHTML = "<h2>Hola mundo</h2>"
+ */
+
+
