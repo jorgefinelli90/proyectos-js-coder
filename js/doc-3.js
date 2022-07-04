@@ -338,5 +338,4 @@ console.log(parrafo.innerText);
 */
 /* 
 let contenedor = document.getElementById("contenedor-6")
-contenedor.innerHTML = "<h2>Hola mundo</h2>"
- */
+contenedor.innerHTML = "<h2>Hola mundo</h2>" */
