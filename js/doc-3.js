@@ -339,3 +339,66 @@ console.log(parrafo.innerText);
 /* 
 let contenedor = document.getElementById("contenedor-6")
 contenedor.innerHTML = "<h2>Hola mundo</h2>" */
+/* 
+let botonUno = document.getElementById("btnPrincipal")
+let botonDos = document.getElementById("btnPrincipal2")
+let botonTres = document.getElementById("btnPrincipal3")
+let botonCuatro = document.getElementById("btnPrincipal4")
+
+botonUno.addEventListener("click",()=>{
+    alert("hola")
+})
+
+botonDos.onmousedown = () => {
+    console.log("evento mouse down")}
+    
+botonTres.onmouseout = () => {
+    console.log("evento mouse out")}
+
+    botonTres.onmouseover = () => {
+        console.log("evento mouse over")}
+    
+        botonTres.onmousemove = () => {
+            console.log("evento mouse move")}
+
+botonCuatro */
+
+let formulario = document.getElementById("formulario");
+let inputNombreProducto = document.getElementById("inputNombreProducto");
+let inputPrecioCompra = document.getElementById("inputPrecioCompra");
+let inputPrecioVenta = document.getElementById("inputPrecioVenta");
+let inputCantidad = document.getElementById("inputCantidad");
+
+let productos = []
+
+class Productos {
+    constructor(nombre, precioCompra, precioVenta, cantidad) {
+        this.nombre = nombre.toUpperCase()
+        this.precioCompra = precioCompra
+        this.precioVenta = precioVenta
+        this.cantidad = cantidad
+    }
+}
+
+formulario.onsubmit = (event)  => validarFormulario(event);
+
+function validarFormulario(event){
+    event.preventDefault();
+    let nombre = inputNombreProducto.value;
+    let precioCompra = inputPrecioCompra.value;
+    let precioVenta = inputPrecioVenta.value;
+    let cantidad = inputCantidad.value;
+
+    if(nombre.length == 0 || precioCompra.length == 0 || precioVenta.length == 0 || cantidad.length == 0){
+        alert("Todos los campos son obligatorios")
+    } else {
+        let producto = new Productos(nombre, precioCompra, precioVenta, cantidad)
+        productos.push(producto)
+        console.log(productos)
+        inputNombreProducto.value = ""
+        inputPrecioCompra.value = ""
+        inputPrecioVenta.value = ""
+        inputCantidad.value = ""
+    }
+}
+  
