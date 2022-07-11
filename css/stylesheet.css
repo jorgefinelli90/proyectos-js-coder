@@ -490,6 +490,77 @@ section .div-tarjetas-producto{
     width: 100px; 
 }
 
-.grande{
+.peque:hover{
+    box-shadow: 0px 0px 10px grey;; 
+}
+
+#grande-izq{
     width: 300px;
+}
+#grande-der{
+    width: 300px;
+}
+
+.imagenes-onclick div img{
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px grey;
+}
+
+.pers-prod{
+    width: 50%;
+    height: 100%;
+    box-shadow: 0px 0px 5px grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#imagen-product-pers{
+    width: 480px;
+    height: 570px;
+    background-image: url(../assets/img/remera-pers.jpg);  
+    background-size: cover;
+}
+
+.ubicacion{
+    margin-left: 253px;
+    margin-top: 178px;
+}
+.card-pers{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.nombre-remera h2{
+    margin-left: 34px;
+    margin-top: 6px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    color: rgb(233, 229, 241);
+    
+}
+.nombre-remera p{
+    margin-left: 30px;
+    margin-top: -9px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    color: rgb(227, 225, 232);
+}
+.nombre-remera h3{
+    margin-left: 139px;
+    margin-top: -12px;
+    transform: rotate(322deg) translate(-7px, 4px);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    color: white;
 }

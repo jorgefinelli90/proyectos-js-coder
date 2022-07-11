@@ -12,75 +12,58 @@
     <div class="titulos">
         <h1 class="titulo-desafio">Desafío: Incorporar eventos</h1>
     </div>
+    <section class="imagenes-onclick d-inline-flex justify-content-around m-3">
+      <div class="cambio-img">
+        <div class="img-cambio-arriba m-2 ">
+            <img id="grande-izq" src="../assets/img/img-targ-4.jpg">
+        </div>
+        <div>
+          <span>Deslize sobre la imagen para ver en detalle</span>
+        </div>
+        <div>
+          <img class="peque" src="../assets/img/img-targ-5.jpg" onmouseenter="cambiarImagenIzq(this)">
+          <img class="peque" src="../assets/img/img-targ-2.jpg" onmouseenter="cambiarImagenIzq(this)">
+          <img class="peque" src="../assets/img/img-targ-3.jpg" onmouseenter="cambiarImagenIzq(this)">
+        </div>
+    </div>
+    <div class="cambio-img">
+      <div class="img-cambio-arriba m-2 ">
+          <img id="grande-der" src="../assets/img/img-targ-2.jpg">
+      </div>
+      <div>
+        <span>Haga click sobre la imagen para ver en detalle</span>
+      </div>
+      <div>
+        <img class="peque" src="../assets/img/img-targ-5.jpg" onclick="cambiarImagenDer(this)">
+        <img class="peque" src="../assets/img/img-targ-2.jpg" onclick="cambiarImagenDer(this)">
+        <img class="peque" src="../assets/img/img-targ-3.jpg" on
+        click="cambiarImagenDer(this)">
+      </div>
+    </div>
+  </section>
     
-    <section class="tarjetasProducto d-inline-flex justify-content-around">
-        <div class="card div-tarjetas-producto" style="width: 18rem;">
-            <img src="../assets/img/img-targ-2.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Campera Lion</h5>
-              <p class="card-text">Confeccionada en algodón, es perfecto para tener a mano los días frescos, pues te acompaña hasta la noche. Disponible en una amplia variedad de colores.</p>
-              <p class="card-text"> Precio: $18.000</p>
-              <a href="#" class="btn btn-primary">Comprar</a>
-              <a href="#" class="btn btn-outline-dark">Agregar al carrito</a>
-            </div>
-          </div>
-          <div class="card div-tarjetas-producto" style="width: 18rem;">
-            <img src="../assets/img/img-targ-1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Campera de cuero Nola</h5>
-              <p class="card-text">Campera de cuero de cabra gamuzada en color beige con relleno. Manga terminada en puño de rib y cintura de 100% algodón a tono.</p>
-              <pcard-text"> Precio: $18.000</p>
-              <a href="#" class="btn btn-primary">Comprar</a>
-              <a href="#" class="btn btn-outline-dark">Agregar al carrito</a>
-            </div>
-          </div>
-          <div class="card div-tarjetas-producto" style="width: 18rem;">
-            <img src="../assets/img/img-targ-5.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Sweater Ralph</h5>
-              <p class="card-text">Sweater escote redondo, menguado. Tejido de tacto suave, disponible en amplia paleta de colores.. Composición: 50% algodón 50% acrílico</p>
-              <pcard-text"> Precio: $18.000</p>
-              <a href="#" class="btn btn-primary">Comprar</a>
-              <a href="#" class="btn btn-outline-dark">Agregar al carrito</a>
-            </div>
-          </div>
-    </section>
-    <div class="card m-5">
+    <div id="cards">
+
+    </div>
+  
+  
+    <div class="card pers-prod m-5">
         <div class="card-header">
-          Featured
+          Novedad
         </div>
         <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <h5 class="card-title">Mas unicas</h5>
+          <p class="card-text">Ahora, podes personalizar tus remeras.</p>
+          <a href="#" class="btn btn-primary">Probar!</a>
         </div>
-      </div>
-
-    <section class="imagenes-onclick d-inline-flex justify-content-around m-3">
-    <div class="cambio-img">
-        <div class="img-cambio-arriba m-2 ">
-            <img class="grande" src="../assets/img/img-targ-4.jpg">
-        </div>
-        <div>
-        <img class="peque" src="../assets/img/img-targ-5.jpg" onmousemove="cambiarImagen(this)">
-        <img class="peque" src="../assets/img/img-targ-2.jpg" onmousemove="cambiarImagen(this)">
-        <img class="peque" src="../assets/img/img-targ-3.jpg" onmousewheel="cambiarImagen(this)">
+        <div class="card-body card-pers">
+        <input id = "nombre" type="text">
+        <div id= "imagen-product-pers">
+          <div class="ubicacion">
+            <div id= "personalizacion"></div>
+          </div>
         </div>
     </div>
-    <div class="cambio-img">
-        <div class="img-cambio-arriba m-2">
-            <img class="grande" src="../assets/img/img-targ-4.jpg">
-        </div>
-        <div>
-        <img class="peque" src="../assets/img/img-targ-5.jpg" onmousemove="cambiarImagen(this)">
-        <img class="peque" src="../assets/img/img-targ-2.jpg" onmousemove="cambiarImagen(this)">
-        <img class="peque" src="../assets/img/img-targ-3.jpg" onmousemove="cambiarImagen(this)">
-        </div>
-    </div>
-    </section>  
-
-
-
 
     <div class="home">
         <a href="/index.html"><p>Ir a Inicio</p></a>
@@ -88,5 +71,38 @@
     <script src="../js/doc-7.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
   
+    <section class="tarjetasProducto d-inline-flex justify-content-around">
+      <div class="card div-tarjetas-producto" style="width: 18rem;">
+          <img src="../assets/img/img-targ-2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Campera Lion</h5>
+            <p class="card-text">Confeccionada en algodón, es perfecto para tener a mano los días frescos, pues te acompaña hasta la noche. Disponible en una amplia variedad de colores.</p>
+            <p class="card-text"> Precio: $18.000</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+            <a href="#" class="btn btn-outline-dark">Agregar al carrito</a>
+          </div>
+        </div>
+        <div class="card div-tarjetas-producto" style="width: 18rem;">
+          <img src="../assets/img/img-targ-1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Campera de cuero Nola</h5>
+            <p class="card-text">Campera de cuero de cabra gamuzada en color beige con relleno. Manga terminada en puño de rib y cintura de 100% algodón a tono.</p>
+            <pcard-text"> Precio: $18.000</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+            <a href="#" class="btn btn-outline-dark">Agregar al carrito</a>
+          </div>
+        </div>
+        <div class="card div-tarjetas-producto" style="width: 18rem;">
+          <img src="../assets/img/img-targ-5.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Sweater Ralph</h5>
+            <p class="card-text">Sweater escote redondo, menguado. Tejido de tacto suave, disponible en amplia paleta de colores.. Composición: 50% algodón 50% acrílico</p>
+            <pcard-text"> Precio: $18.000</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+            <a href="#" class="btn btn-outline-dark">Agregar al carrito</a>
+          </div>
+        </div>
+  </section>
+
 </body>
 </html>
