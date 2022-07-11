@@ -528,6 +528,7 @@ section .div-tarjetas-producto{
 }
 .card-pers{
     display: flex;
+    width: 100%;
     flex-direction: column;
     justify-content: end;
 }
