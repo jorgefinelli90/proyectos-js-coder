@@ -114,6 +114,13 @@ h1 {
 
 /* estilos proyecto final */
 
+#menu {
+    position: -webkit-sticky;
+    z-index: 9999;
+      position: sticky;
+      top: 0; 
+  }
+
 @media screen and (max-width: 560px) {
     .form-control {
         background-color: transparent;
@@ -439,6 +446,9 @@ footer {
     .banner-home-desktop {
         display: none;
     }
+    .peque-d-none{
+        display: none;
+    }
 }
 
 .precio-cart {
@@ -565,3 +575,27 @@ section .div-tarjetas-producto{
     font-weight: 900;
     color: white;
 }
+
+
+/* ================================================================= */
+
+.imagenes-peque{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.imagenes-peque img{
+    margin: 5px;
+    box-shadow: 0px 0px 5px grey;
+}
+.img-cambio-arriba{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
