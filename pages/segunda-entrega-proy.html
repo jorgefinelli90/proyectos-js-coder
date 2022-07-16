@@ -15,13 +15,16 @@
         <nav id="menu" class="navbar navbar-expand-lg bg-light">
               <div class="container-fluid">
                 <div class="accionadores-desktop">
-                  <!-- log in -->
-                  <div class="logIn">
-                    <i class="fa-solid fa-user"></i>
-                  </div>
+                  <div class="d-flex flex-column">
+                    <!-- log in -->
+                    <div class="logIn">
+                      <i class="fa-solid fa-user"></i>
+                    </div>
                   <!--carrito-->
-                  <div class="carrito">
-                    <i class="fa-solid fa-bag-shopping"></i>
+                    <div class="carrito-icono">
+                      <i class="fa-solid fa-bag-shopping"></i>
+                      <p id="shop-bag"></p>
+                    </div>
                   </div>
                   <!-- busqueda -->
                   <div class="search-boxx">
@@ -38,19 +41,15 @@
                   </button>
                   <!--logo -->
                   <a class="navbar-brand" href="#"><img src="../assets/img/logo-negro.png" alt="" width="40%"></a>
-                  <!-- log in -->
-                  <div class="logIn">
-                    <i class="fa-solid fa-user"></i>
-                  </div>
-                  <!--carrito-->
-                  <div class="carrito">
-                    <i class="fa-solid fa-bag-shopping"></i>
-                  </div>
-                  <div class="search-boxx">
-                    <input class="input-search" type="text"placeholder="search ...." />
-                    <a href="##" class="icon-search">
-                      <i class="fas fa-search"></i>
-                    </a>
+                  <div class="d-flex">
+                    <!-- log in -->
+                    <div class="logIn">
+                      <i class="fa-solid fa-user"></i>
+                    </div>
+                    <!--carrito-->
+                    <div class="carrito-icono">
+                      <i class="fa-solid fa-bag-shopping"></i>
+                    </div>
                   </div>
                 </div>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -119,27 +118,24 @@
           <section class="seleccion-imagenes">
             <div class="cambio-img card-body">
               <div class="img-cambio-arriba m-2 ">
-                  <img id="grande-der" src="../assets/img/imagen-sel-portada.jpg">
-              </div>
-              <div>
-                <span>Haga click sobre la imagen para ver en detalle</span>
+                  <img href="#cards" id="grande-der" src="../assets/img/imagen-sel-portada.jpg">
               </div>
               <div class="imagenes-peque">
-                <img class="peque" src="../assets/img/I2243CAP01.jpg" onmouseenter="cambiarImagenDer(this)">
-                <img class="peque" src="../assets/img/I2243CAP10-2.jpg" onmouseenter="cambiarImagenDer(this)">
-                <img class="peque" src="../assets/img/I2243CAP10.jpg" onmouseenter="cambiarImagenDer(this)">
-                <img class="peque" src="../assets/img/I2243CAP01.jpg" onmouseenter="cambiarImagenDer(this)">
-                <img class="peque" src="../assets/img/I2243CAP10-2.jpg" onmouseenter="cambiarImagenDer(this)">
-                <img class="peque" src="../assets/img/I2243CAP10.jpg" onmouseenter="cambiarImagenDer(this)">
-                <img class="peque peque-d-none" src="../assets/img/I2243CAP01.jpg" onmouseenter="cambiarImagenDer(this)">
-                <img class="peque peque-d-none" src="../assets/img/I2243CAP10-2.jpg" onmouseenter="cambiarImagenDer(this)">
-                <img class="peque peque-d-none" src="../assets/img/I2243CAP10.jpg" onmouseenter="cambiarImagenDer(this)">
+                <img class="peque" src="../assets/img/img-targ-7.jpg" onmouseenter="cambiarImagenDer(this)">
+                <img class="peque" src="../assets/img/img-targ-8.jpg" onmouseenter="cambiarImagenDer(this)">
+                <img class="peque" src="../assets/img/img-targ-9.jpg" onmouseenter="cambiarImagenDer(this)">
+                <img class="peque" src="../assets/img/img-targ-7.jpg" onmouseenter="cambiarImagenDer(this)">
+                <img class="peque" src="../assets/img/img-targ-8.jpg" onmouseenter="cambiarImagenDer(this)">
+                <img class="peque" src="../assets/img/img-targ-9.jpg" onmouseenter="cambiarImagenDer(this)">
+                <img class="peque peque-d-none" src="../assets/img/img-targ-7.jpg" onmouseenter="cambiarImagenDer(this)">
+                <img class="peque peque-d-none" src="../assets/img/img-targ-8.jpg" onmouseenter="cambiarImagenDer(this)">
+                <img class="peque peque-d-none" src="../assets/img/img-targ-9.jpg" onmouseenter="cambiarImagenDer(this)">
               </div>
             </div>
           </section>
 
 
-          <section class="blocks">
+          <section class="blocks mb-5 mt-5">
             <div class="block-1">
               <div class="titulo-block">
                 <p class="texto-block">
@@ -164,100 +160,13 @@
           </section>
 
           <!-- tarjetas de productos -->
-          
-            <section class="cards">
-                <div class="card-1">
-                <div class="card-img">
-                    <img src="../assets/img/img-targ-1.jpg" width="250px" alt="">
-                </div>
-                <div class="card-text">
-                  <p class="texto-card">
-                    Pantalon Deep Manhattan
-                  </p>
-                  <div class="precio-cart">
-                    <p class="texto-card">
-                  $16.000
-                  </p>
-                  <p class="texto-card">
-                    Comprar
-                  </p>
-                  </div>
-                </div>
-                </div>
-                <div class="card-2">
-                <div class="card-img">
-                    <img src="../assets/img/img-targ-2.jpg" width="250px" alt="">
-                </div>
-                <div class="card-text">
-                    <p class="texto-card">
-                      Campera Lion
-                    </p>
-                    <div class="precio-cart">
-                      <p class="texto-card">
-                    $15.000
-                    </p>
-                    <p class="texto-card">
-                      Comprar
-                    </p>
-                    </div>
-                </div>
-                </div>
-                <div class="card-3">
-                <div class="card-img">
-                    <img src="../assets/img/img-targ-3.jpg"width="250px" alt="">
-                </div>
-                <div class="card-text">
-                    <p class="texto-card">
-                    Campera Heavy Rocko
-                    </p>
-                    <div class="precio-cart">
-                      <p class="texto-card">
-                    $25.000
-                    </p>
-                    <p class="texto-card">
-                      Comprar
-                    </p>
-                    </div>
-                </div>
-                </div>
-                <div class="card-4">
-                <div class="card-img">
-                    <img src="../assets/img/img-targ-4.jpg"width="250px" alt="">
-                </div>
-                <div class="card-text">
-                    <p class="texto-card">
-                    Remera Kenzie Kraft
-                    </p>
-                    <div class="precio-cart">
-                      <p class="texto-card">
-                    $8.000
-                    </p>
-                    <p class="texto-card">
-                      Comprar
-                    </p>
-                    </div>
-                </div>
-                </div>
-                <div class="card-5">
-                  <div class="card-img">
-                      <img src="../assets/img/img-targ-5.jpg"width="250px" alt="">
-                  </div>
-                  <div class="card-text">
-                      <p class="texto-card">
-                      Buzo Kendall
-                      </p>
-                      <div class="precio-cart">
-                        <p class="texto-card">
-                      $20.000
-                      </p>
-                      <p class="texto-card">
-                        Comprar
-                      </p>
-                      </div>
-                  </div>
-                  </div>
-            </div>
-            </section>
+
+          <div id="cards"></div>
+
+          <div><h1>Carrito</h1></div>
+          <div id="carrito"></div>
+    
+
           <footer class="container">
             <div class="row">
               <div class="footer-central col-sm-12 col-md-4 col-lg-4">
