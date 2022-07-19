@@ -362,7 +362,7 @@ botonTres.onmouseout = () => {
             console.log("evento mouse move")}
 
 botonCuatro */
-
+/* 
 let formulario = document.getElementById("formulario");
 let inputNombreProducto = document.getElementById("inputNombreProducto");
 let inputPrecioCompra = document.getElementById("inputPrecioCompra");
@@ -401,4 +401,37 @@ function validarFormulario(event){
         inputCantidad.value = ""
     }
 }
-  
+   */
+
+/* 
+const btnMostarAlert = document.getElementById("btnMostarAlert");
+btnMostarAlert.addEventListener("click", () => {
+    Swal.fire({
+        title: 'quieres guardar los cambios?',
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: 'Guardar',
+        denyButtonText: `Cancelar`,
+      }).then((result) => {
+        
+        if (result.isConfirmed) {
+          Swal.fire('Guardado', '', 'success')
+        } else if (result.isDenied) {
+          Swal.fire('Los cambios no han sido guardados', '', 'info')
+        }
+      })
+
+    });
+
+
+    Toastify({
+
+        text: "This is a toast",
+        
+        duration: 3000
+        
+        }).showToast();
+
+ */
+        const now = DateTime.now()
+        console.log( now.toString() )
