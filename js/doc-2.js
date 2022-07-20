@@ -1,4 +1,5 @@
 //const para consultar si quiere un producto adicional
+
 const algoMas = () => {
         let opcion = prompt("Desea comprar algo mas? \n 1: SI 2: NO")
         if (opcion == "1") {
@@ -7,7 +8,11 @@ const algoMas = () => {
             alert("Gracias por su compra")
         }
     }
-    //funcion de envio
+
+
+//operador ternario:
+
+//funcion de envio
 function envio() {
     let seleccionEnvio = parseInt(prompt(nombre + " deseas pagar envio a domicilio? Costo de envio: $400 \n 1: SI \n 2:NO"));
     switch (seleccionEnvio) {

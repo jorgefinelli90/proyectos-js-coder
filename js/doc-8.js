@@ -153,3 +153,10 @@ botonvaciar.addEventListener("click", (e) => {
     renovarStorage(); //limpiar storage
 });
 
+//Ejemplo de operadores ternarios
+
+carrito.productos.length === 0 && console.log("El carrito está vacío!")
+
+
+
+
