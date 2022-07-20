@@ -40,7 +40,8 @@ function renderCard(producto){
             <p class="card-text card-desc">Sweater escote redondo, menguado. Tejido de tacto suave, disponible en amplia paleta de colores.. Composición: 50% algodón 50% acrílico</p>
             <p class="card-text"> Precio: $${producto.precio}</p>
             <a href="##" class="btn btn-outline-dark botonDeCompra" id="${producto.id}">Agregar al carrito</a>
-        </div>
+            <a href="##" class="btn btn-outline-dark botonDeCompra" >X</a>
+            </div>
     </div>
     `;
     return cardRendered;
@@ -61,10 +62,7 @@ function actualizarCarrito(carrito) {
     divCarrito.innerHTML += ` <h2>Total: $${carrito.calcularTotal()}</h2>`;
 }
 
-function renovarStorage() {
-    localStorage.removeItem("carrito"); 
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-}
+
 
 //cargar carrito existente
 window.addEventListener('DOMContentLoaded', (e) => {
@@ -76,6 +74,24 @@ window.addEventListener('DOMContentLoaded', (e) => {
     limpiarCarrito();
     actualizarCarrito(carritoGuardado);
 });
+
+
+
+
+
+/* function vaciarCarrito() {
+    // Limpiamos los productos guardados
+    carrito = [];
+    // Renderizamos los cambios
+    renderCard();
+    // Borra LocalStorage
+    localStorage.clear();
+
+}
+
+
+const DOMbotonVaciar = document.querySelector('#boton-vaciar');
+DOMbotonVaciar.addEventListener('click', vaciarCarrito); */
 
 // generacion catalogo de productos
 let catalogoProductos = [];
@@ -117,6 +133,7 @@ arrayDeBotones.forEach(boton => {
     boton.addEventListener("click", (e) => {
         console.log(e.target.id)
         let productoSeleccionado = catalogoProductos.find(producto => producto.id == e.target.id);
+        
         carrito.productos.push(productoSeleccionado);
         console.log(carrito)
         limpiarCarrito();
@@ -126,4 +143,13 @@ arrayDeBotones.forEach(boton => {
     })
 });
 
+//vaciar carrito
+
+let botonvaciar = document.querySelector("#boton-vaciar");
+botonvaciar.addEventListener("click", (e) => {
+    limpiarCarrito(); //limpiar carrito
+    carrito.productos = []; //limpiar productos
+    actualizarCarrito(carrito); //actualizar carrito
+    renovarStorage(); //limpiar storage
+});
 
