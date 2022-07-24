@@ -76,6 +76,26 @@ window.addEventListener('DOMContentLoaded', (e) => {
 });
 
 
+const miNodo = document.createElement('li');
+        miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
+        miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - ${miItem[0].precio}${divisa}`;
+
+ //Evento para borrar un elemento del carrito
+
+ function borrarItemCarrito(evento) {
+    // Obtenemos el producto ID que hay en el boton pulsado
+    const id = evento.target.dataset.item;
+    // Borramos todos los productos
+    carrito = carrito.filter((carritoId) => {
+        return carritoId !== id;
+    });
+    // volvemos a renderizar
+    renderizarCarrito();
+    // Actualizamos el LocalStorage
+    guardarCarritoEnLocalStorage();
+
+}
+
 
 
 
@@ -156,6 +176,7 @@ botonvaciar.addEventListener("click", (e) => {
 //Ejemplo de operadores ternarios
 
 carrito.productos.length === 0 && console.log("El carrito está vacío!")
+
 
 
 

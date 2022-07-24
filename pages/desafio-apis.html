@@ -10,9 +10,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
   <body class="bodyProyectoFinal">
-        <div>
-            <!-- <img src="./assets/img/logo-negro.png" alt=""> -->
-        </div>
         <nav id="menu" class="navbar navbar-expand-lg bg-light">
               <div class="container-fluid">
                 <div class="accionadores-desktop">
@@ -73,6 +70,7 @@
               </div>
             </div>
           </nav>
+          <!-- carrousel desktop y mobile -->
           <div id="carouselExampleFade" class="banner-home-desktop carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -115,7 +113,7 @@
               <span class="visually-hidden">Next</span>
             </button>
           </div>
-
+<!-- Seleccionador de imagenes -->
           <section class="seleccion-imagenes m-5">
             <div class="cambio-img card-body">
               <div class="img-cambio-arriba m-2 ">
@@ -135,7 +133,7 @@
             </div>
           </section>
 
-
+<!-- bloques de promocion -->
           <section class="blocks mb-5 mt-5">
             <div class="block-1">
               <div class="titulo-block">
@@ -147,7 +145,6 @@
                 <a  class="button-block" href="#">discover more</a>
               </div>
             </div>
-  
             <div class="block-2">
               <div class="titulo-block">
                 <p class="texto-block">
@@ -159,19 +156,20 @@
               </div>
             </div>
           </section>
-
-          <!-- tarjetas de productos -->
-
-          <div id="cards"></div>
-
-          <div>
-            <h1>Carrito</h1>
-            <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+<!-- tarjetas de productos -->
+          <div class="container">
+            <div class="column">
+              <main id="items" class="col row"></main>
+              <aside class="col-sm-4">
+                  <h2>Carrito</h2>
+                  <ul id="carrito" class="list-group"></ul>
+                  <hr>
+                  <p class="text-right">Total: <span id="total"></span>&dollar; </p>
+                  <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+              </aside>
+            </div>
           </div>
-
-          <div id="carrito"></div>
-    
-
+<!-- Footer -->
           <footer class="container">
             <div class="row">
               <div class="footer-central col-sm-12 col-md-4 col-lg-4">
@@ -226,21 +224,13 @@
             </div>
           </footer>
 
-          <aside class="col-sm-4">
-            <h2>Carrito</h2>
-            <!-- Elementos del carrito -->
-            <ul id="carrito" class="list-group"></ul>
-            <hr>
-            <!-- Precio total -->
-            <p class="text-right">Total: <span id="total"></span>&euro;</p>
-            <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
-        </aside>
+          
 
           
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+          <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
           <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-          <script src="../js/doc-8.js"></script>
+          <script src="../js/doc-9.js"></script>
   </body>
 </html>
 
