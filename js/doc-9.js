@@ -68,7 +68,8 @@ function renderizarProductos(){
     function agregarProductoAlCarrito(evento){
         carrito.push(evento.target.getAttribute('marcador'));
         renderizarCarrito();
-        agregadoAlCarrito()
+        agregadoAlCarrito();
+        AgregadoAlCarritoresumen();
         guardarCarritoEnLocalStorage();
     }
 
@@ -96,10 +97,14 @@ function renderizarCarrito() {
         miBoton.addEventListener('click', borrarItemCarrito);
         miNodo.appendChild(miBoton);
         DOMcarrito.appendChild(miNodo);
+        let shopBag = document.querySelector("#shop-bag");
+        shopBag.innerHTML = `<span class="m-2">Total: `+ calcularTotal() +`</span>`;
     });
     // Renderizamos el precio total en el HTML
     DOMtotal.textContent = calcularTotal();
 }
+
+
 
         //Evento para borrar un elemento del carrito
 
@@ -153,7 +158,6 @@ function renderizarCarrito() {
                 Toastify({
                     text: `Producto agregado al carrito`,
                     duration: 2000,
-                    destination: "https://github.com/apvarun/toastify-js",
                     newWindow: false,
                     close: false,
                     gravity: "top", // `top` or `bottom`
@@ -164,4 +168,19 @@ function renderizarCarrito() {
                     },
                     onClick: function(){} // Callback after click
                   }).showToast();
+                }
+            
+            function AgregadoAlCarritoresumen(id){
+                Swal.fire({
+                    position: 'bottom-start',
+                    html: '<aside class="col">'+
+                    '<h2>Gracias por su compra</h2>'+
+                    '<ul id="carrito" class="list-group"></ul>'+
+                    '<hr>'+
+                    '<p class="text-right">Total: <span id="total">'+calcularTotal()+ '</span>&dollar; </p>'+  
+                    '</aside>' ,
+                    imageHeight: 500,
+                    confirmButtonText: 'Seguir comprando',
+                    duration: 2000,
+                  })
                 }
