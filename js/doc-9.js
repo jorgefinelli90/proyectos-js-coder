@@ -195,6 +195,7 @@ function renderizarCarrito() {
             function AgregadoAlCarritoresumen(id){
                 Swal.fire({
                     position: 'bottom-start',
+                    timer: 1000,
                     html: '<aside class="col">'+
                     '<h2>Gracias por su compra</h2>'+
                     '<ul id="carrito" class="list-group"></ul>'+
@@ -203,6 +204,5 @@ function renderizarCarrito() {
                     '</aside>' ,
                     imageHeight: 500,
                     confirmButtonText: 'Seguir comprando',
-                    duration: 2000,
                   })
                 }
