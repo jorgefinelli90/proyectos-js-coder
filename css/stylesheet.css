@@ -618,4 +618,15 @@ section .div-tarjetas-producto{
 #carrito{
     display: flex;
 }
-
+/* estilos contacto */
+.contacto-form{
+    display: flex;
+    flex-wrap: wrap;
+}	
+#opinion{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#boton-contacto{
+    margin-left: 33vmax
+}
