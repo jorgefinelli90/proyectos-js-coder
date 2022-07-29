@@ -73,33 +73,29 @@
         <!-- contacto -->
         <main class="contacto-form pt-5 d-flex justify-content-around">
             <section class="col-lg-5 col-md-6 col-xs-1">
-                <div class="datos-newsletter">
-                    <label for="nombre" class="form-label">Nombre y Apellido</label>
-                    <input type="text" class="form-control" id="exampleImputNombre" placeholder="" name="nombre" >
+              <form id="form">
+                <div class="field">
+                  <label for="from_name">from_name</label>
+                  <input type="text" name="from_name" id="from_name">
                 </div>
-                <div class="datos-newsletter">
-                    <label for="email-news" class="form-label">Correo Electronico</label>
-                    <input type="email" class="form-control" id="exampleImputEmail" placeholder="nombre@correo.com" name="email">
+                <div class="field">
+                  <label for="email">email</label>
+                  <input type="text" name="email" id="email">
                 </div>
-                <div class="datos-newsletter">
-                    <label for="como-nos-conociste" class="form-label">Como nos conociste?:</label>
-                    <input class="form-control" list="datalistOptions" id="como-nos-conociste" placeholder="Despliegue aqui" name="conociste">
-                    <datalist id="exampleImputDatalist">
-                        <option value="Por un amigo">
-                        <option value="Redes sociales">
-                        <option value="Reviews de moda">
-                    </datalist>
+                <div class="field">
+                  <label for="reply_to">reply_to</label>
+                  <input type="text" name="reply_to" id="reply_to">
                 </div>
-                <div class="datos-newsletter">
-                    <textarea class="form-control" id="opinion" rows="5" placeholder="Ingresa aqui tu comentario" name="Opinion"></textarea>
-                </div>
-                <div class="form-check form-switch datos-newsletter">
-                    <input class="form-check-input" type="checkbox" role="switch" id="newsletter" name="news">
-                    <label class="form-check-label" for="flexSwitchCheckDefault">Deseas suscribirte a nuestro newsletter?</label>
-                </div>
-                <div class="datos-newsletter">
-                    <imput type="submit" value="send mail" class="btn" id="button">Enviar</imput>
-                </div>
+              
+                <input type="submit" id="button" value="Send Email" >
+              </form>
+              
+              <script type="text/javascript"
+                src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+              
+              <script type="text/javascript">
+                emailjs.init('ao7g1flfb2djN3rh8')
+              </script>
             </section>
             <aside>
                 <div class="col-lg-7 col-md-6 col-xs-1">
@@ -165,8 +161,7 @@
 
           
 
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-        <script type="text/javascript">emailjs.init('ao7g1flfb2djN3rh8')</script>
+        
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
