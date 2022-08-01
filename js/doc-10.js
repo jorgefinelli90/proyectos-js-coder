@@ -208,19 +208,23 @@ function renderizarCarrito() {
                 }
                 
 /* api de contacto, aplicando EMAILJS */
-let sendButton = document.getElementById("send-button");
-const form = document.getElementById("news-form")
-.addEventListener('submit', function(event) {
-    event.preventDefault();
-    btn.value = 'Sending...';
-    const serviceID = 'service_g7992bi';
-    const templateID = 'template_7c227kd';
-    emailjs.sendForm(serviceID, templateID, this)
+const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Enviando';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_7c227kd';
+
+   emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
-        btn.value = 'Send Email';
-        alert('Sent!');
+      btn.value = 'Send Email';
+      alert('Mensaje enviado correctamente, gracias por contactarse con Burgues.com');
     }, (err) => {
-        btn.value = 'Send Email';
-        alert(JSON.stringify(err));
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
     });
 });
